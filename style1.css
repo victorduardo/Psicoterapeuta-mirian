@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(193, 169, 169);
+    font-family: 'Comfortaa', sans-serif;
+}
+
+/* Container da Imagem */
+.hero {
+    background-image: url('imagem\ 1300.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 150vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Faz o header e o conteúdo empilharem */
+}
+
+/* Textos sobre a imagem */
+.conteudo-hero, .conteudo-2 {
+    width: 90%;
+    max-width: 1400px;        /* Limite para o texto não esticar demais */
+    margin-left: auto;       /* EMPURRA PARA A DIREITA */
+    margin-right: 5%;        /* Distância da borda direita */
+    text-align: right;       /* Alinha as linhas do texto à direita */
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    font-family: 'Comfortaa', sans-serif;
+}
+
+/* Posição do Primeiro Texto */
+.conteudo-hero {
+    padding-top: 370px;      /* Altura do primeiro texto */
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Posição do Segundo Texto (Logo abaixo do primeiro) */
+.conteudo-2 {
+    padding-top: 30px;       /* Distância entre o primeiro e o segundo texto */
+    font-size: 1.7rem;       /* Um pouco menor para dar hierarquia */
+    font-weight: 400;        /* Mais leve para diferenciar do título */
+    padding-right: 60px;
+}
+
+/* Cabeçalho */
+.meu-cabeçalho {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(69, 69, 69, 0.9);
+    padding: 20px;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+h1 {
+    padding: 10px 20px;
+    background-color: rgba(53, 47, 59, 0.9);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+h1:hover {
+    background: linear-gradient(to bottom, #5A09A5, #EE82EE);
+    transform: scale(1.05);
+}
+
+h3{
+    font-family: Courier;
+    font-size: 50px;
+    margin-left: 40px;
+    margin-top: 100px;
+}
+
+.lista-curriculo{
+    margin-left: 40px;
+    font-size: 20px;
+    margin-top: 30px    ;
+}
+
+li{
+    margin-bottom: 20px;
+
+}
+
+p{
+    font-size: 40px;
+    margin-left:30px;
+}
+
+.sessao-galeria {
+    padding: 60px 5%;
+}
+
+.bento-container {
+    padding: 80px 5%;
+    background-color: rgb(193, 169, 169); /* Fundo levemente azulado/cinza */
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 20px;
+    grid-auto-flow: dense;
+}
+
+.bento-item {
+    background: white;
+    border-radius: 24px; /* Cantos bem arredondados: a marca da Bento Box */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05); /* Sombra bem leve */
+    transition: transform 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px); /* Flutua levemente ao passar o mouse */
+}
+
+/* Estilo para os Cards de Texto dentro da Bento */
+.card-texto {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+}
+
+.card-texto h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #5A09A5;
+    margin-bottom: 10px;
+}
+
+/* Card com cor de destaque (Roxo do seu site) */
+.card-roxo {
+    background: linear-gradient(135deg, #5A09A5, #EE82EE);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* Imagens ocupando todo o espaço */
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Reutilizando suas classes de tamanho */
+.foto-larga { grid-column: span 2; }
+.foto-alta { grid-row: span 2; }
+
+@media (max-width: 768px) {
+    .foto-larga, .foto-alta { grid-column: span 1; grid-row: span 1; }
+}
+
+.texto-baixo{
+    text-align: center;
+}
+
+h4{
+
+    font-size: 60px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.outro{
+    display: flex;
+}
+
+.trabalho2{
+    background-color: rgba(61, 53, 68, 0.85);
+    border-radius: 20px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    margin-left: 18rem;
+    color: white;
+    line-height: 5rem;
+    max-width: 1000px;
+    width: fit-content;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra suave para dar profundidade */
+    border: 2px solid rgba(238, 130, 238, 0.5);
+}
+
+.rodapé{
+    margin-top: 15rem;
+    background-color: rgba(69, 69, 69, 0.9);
+    color: white;
+    padding: 30px 10px;
+}
+
+h5{
+    margin-left: 32rem;
+}
+
+
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.container a {
+    text-decoration: none; /* Tira o sublinhado */
+    color: inherit;       /* Faz o link usar a cor branca do h1 */
+    display: inline-block; /* Garante que o link se comporte como o botão */
+}
+
+/* 3. Mantém o seu efeito de Hover (importante!) */
+.container a:hover h1 {
+    background: linear-gradient(to bottom, #5A09A5, #EE82EE);
+    transform: scale(1.05);
+}
