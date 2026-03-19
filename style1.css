@@ -232,6 +232,116 @@ html{
     display: inline-block; /* Garante que o link se comporte como o botão */
 }
 
+/* =========================================================
+   REGRAS ESPECÍFICAS PARA CELULARES (Telas até 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* 1. AJUSTE GERAL */
+    body {
+        font-size: 16px; /* Diminui o tamanho base da fonte para celulares */
+        overflow-x: hidden; /* Evita que o site "dance" para os lados */
+    }
+
+    /* 2. CABEÇALHO (MENU) */
+    .meu-cabeçalho {
+        padding: 15px 5%; /* Reduz o padding para ganhar espaço */
+        position: relative; /* O menu deixa de ser absoluto para não tapar o conteúdo */
+    }
+
+    .container {
+        flex-direction: column; /* Empilha os botões (um embaixo do outro) */
+        gap: 10px; /* Diminui o espaço entre eles */
+        width: 100%;
+    }
+
+    h1 {
+        width: 100%; /* Faz o botão ocupar a largura toda da tela */
+        font-size: 1.1rem; /* Texto do botão um pouco menor */
+        padding: 12px;
+        text-align: center;
+    }
+
+    /* 3. SEÇÃO HERO (A FOTO DE FUNDO) */
+    .hero {
+        min-height: 80vh; /* Diminui a altura da foto para não precisar rolar muito */
+        background-attachment: scroll; /* Melhora o desempenho em celulares antigos */
+    }
+
+    .conteudo-hero, .conteudo-2 {
+        text-align: center; /* Centraliza o texto (fica melhor em telas estreitas) */
+        width: 90%;
+        margin: 0 auto; /* Centraliza as divs na tela */
+        padding-right: 0; /* Remove padding lateral que tínhamos no notebook */
+    }
+
+    .conteudo-hero {
+        padding-top: 80px; /* Ajusta a posição do texto na foto */
+        font-size: 1.6rem; /* Diminui o tamanho da frase principal */
+    }
+
+    .conteudo-2 {
+        padding-top: 15px;
+        font-size: 1.2rem; /* Texto de apoio menor */
+    }
+
+    /* 4. CURRÍCULO E TÍTULOS */
+    h3 {
+        font-size: 2rem; /* Diminui o título 'sobre mim' */
+        margin-left: 5%;
+        margin-top: 50px;
+    }
+
+    .lista-curriculo {
+        margin-left: 8%;
+        width: 84%;
+        font-size: 1.1rem; /* Texto da lista mais legível */
+    }
+
+    /* 5. BENTO BOX (GALERIA) */
+    .bento-grid {
+        grid-template-columns: 1fr; /* Força uma única coluna (uma foto por linha) */
+        grid-auto-rows: 200px; /* Diminui a altura das fotos */
+        gap: 15px;
+    }
+
+    /* Remove o efeito de ocupar 2 colunas/linhas no celular */
+    .foto-larga, .foto-alta {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    /* 6. TRABALHOS REALIZADOS (A BOLHA) */
+    h4 {
+        font-size: 2.2rem; /* Título menor */
+        margin-top: 60px;
+    }
+
+    .outro {
+        padding: 20px 5%; /* Reduz o padding externo */
+    }
+
+    .trabalho2 {
+        width: 100%; /* A bolha ocupa a largura da tela */
+        max-width: 100%;
+        padding: 30px; /* Reduz o espaço interno */
+        border-radius: 20px; /* Cantos menos redondos (combina com a tela quadrada) */
+        font-size: 1.3rem; /* Texto menor e mais compacto */
+        line-height: 2.2rem; /* Espaçamento entre frases menor */
+        text-align: center;
+    }
+
+    /* 7. RODAPÉ */
+    .rodapé {
+        margin-top: 60px;
+        padding: 30px 5%;
+    }
+
+    h5 {
+        font-size: 0.9rem; /* Texto de crédito menor */
+    }
+}
+
 /* 3. Mantém o seu efeito de Hover (importante!) */
 .container a:hover h1 {
     background: linear-gradient(to bottom, #5A09A5, #EE82EE);
